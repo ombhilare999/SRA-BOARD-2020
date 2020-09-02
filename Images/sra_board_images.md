@@ -1,10 +1,10 @@
 # Images of sra board 2020:
 
 1. Schematic image: 
-![Schematic](master/Images/Schematic.png)
+![Schematic](SRA-BOARD-2020/master/Images/Board_Images/Schematic.png)
 
 2. Top silkscreen:
-![Top silkscreen](master/Images/Top_silkscreen.png)
+![Top silkscreen](SRA-BOARD-2020/master/Images/Board_Images/Top_silkscreen.png)
 
 3. Bottom silkscreen:
-![Bottom silkscreen](master/Images/Bottom_silkscreen.png)
+![Bottom silkscreen](SRA-BOARD-2020/master/Images/Board_Images/Bottom_silkscreen.png)
