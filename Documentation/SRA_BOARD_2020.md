@@ -39,7 +39,7 @@ In general every development board like sra board have following basic features:
     - Sra board 2019 has power switch for motor driver using which power supply to motor driver can be turned on or off.
     - Similarly there is a MCU switch for esp32 microcontroller using which microcontroller can be turned on or off.
 
->Now that you understood about basic of development board now let's talk about changes made in the new design.(for more detailed info of sra board 2019 checkout this [pdf]())
+>Now that you understood about basic of development board now let's talk about changes made in the new design.(for more detailed info of sra board 2019 checkout this [pdf](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Documentation/assets/Sra-board-2019.pdf))
 
 - ## Major changes made in the new design:
     - **7805(5V linear regulator) replaced by [LM2596 buck](https://www.youtube.com/watch?v=m8rK9gU30v4) circuit:**<br /><br />
@@ -63,7 +63,7 @@ In general every development board like sra board have following basic features:
     > -  In previous year sra board one L298N was used using which only two motors as l298n as two motor channels but in this year 2x TB6612FNG  motor driver is used so maximum 4 motors can be controlled using esp32.
     > - Motor driver can be worked in two modes **Normal mode** and **parallel mode**:   
     > > 1. **Normal Mode**:<br />
-    ![](/Documentation/assets/normal_mode.png)<br />
+    ![](/Documentation/assets/normal_mode.jpeg)<br />
     As discussed earlier in new design there are two motor drivers. Each TB6612FNG can control two motors. So therefore using two motor driver one can control 4 motors using 8 GPIO's of esp32.<br />
     For example: if 32 pin is HIGH(IN1 = HIHG) and pin 33 is low(IN2 = LOW) then motor 1 moves in the forward direction. <br \>
     So in normal mode 4 motors can be connected to the board.
