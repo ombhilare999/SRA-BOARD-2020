@@ -14,13 +14,16 @@ Sra board is a development board based on esp32 with peripherals like motor driv
     - [Protection against reverse voltage and overcurrent](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#protection-against-reverse-voltage-and-overcurrent)
     - [Programmable switches and leds](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Programmable-switches-and-leds)
     - [Power on/off switch](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#power-onoff-switch)
+- [Images of the board](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Images-of-the-board)
 - [Major changes made in the new design](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#major-changes-made-in-the-new-design)
     - [7805 replaced by LM2596 buck](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#78055v-linear-regulator-replaced-by-lm2596-buck-circuit)
     - [ld33 replaced by AMS1117](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#ld3333v-replaced-by-ams1117)
     - [Reverse voltage protection diodes replaced by pmosfet](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#diodes-for-reverse-voltage-replaced-by-p-type-mosfet)
     - [L298N replaced by TB6612FNG](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#l298n-replaced-by-tb6612fng)
     - [4 motor channels and modes of motor driver](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#4-motor-channels-and-normal-parallel-mode-of-motor-driver)
-    - [switch to bar graph led and more no. of switches](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#moving-back-to-vintage-bar-graph-led-and-more-no-of-switches)
+    - [switch to bar graph led and more no. of switches](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/
+    README.md#moving-back-to-vintage-bar-graph-led-and-more-no-of-switches)
+- [3D model](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#3D-mode)
 - [Current Status](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Current-Status)
 - [Designer](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Designer)
 - [License](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#License)
@@ -63,6 +66,9 @@ In general every development board like sra board have following basic features:
 - ### Power on/off switch:
     - Sra board 2019 has power switch for motor driver using which power supply to motor driver can be turned on or off.
     - Similarly there is a MCU switch for esp32 microcontroller using which microcontroller can be turned on or off.
+
+## Images of the board:
+- Images of SRA board 2020 are [here](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Images/sra_board_images.md#images-of-sra-board-2020)
 
 >Now that we covered basic of development board, let's talk about changes made in the new design.(for more detailed info of sra board 2019 checkout this [pdf](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Documentation/assets/Sra-board-2019.pdf))
 
@@ -114,6 +120,14 @@ In general every development board like sra board have following basic features:
     -  With 8 leds in hand programmer can do crazy tricks for debugging. Some examples are as follows:
         1. According to the lsa data we can program 4 leds to turn on when line sensor detects white color and turn off for black color with this feature debugging will be easy.
         2. If motor is moving in forward direction according to that dedicated leds will be turn on indicating IN1 is high and IN2 is low because of this motion of the bot can be debugged.
+
+## 3D model:
+
+- 3D preview of *[SRA BOARD](https://a360.co/3c1Rjyv)*.
+
+    1. Complete 3D model file of  [SRA_BOARD](https://github.com/ombhilare999/SRA-BOARD-2020/tree/master/3D%20models/sra_board_model)
+    2. 3D models of motor driver, leds, esp32 etc. all are here :  [3d models of other components](https://github.com/ombhilare999/SRA-BOARD-2020/tree/master/3D%20models/Other_components_model)
+
 
 ## Current Status:
 
