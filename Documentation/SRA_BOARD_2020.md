@@ -17,7 +17,7 @@ In general every developement board like sra board have following basic features
   - Microcontroller usually runs on 3.3V or 5V and input to the developement board is normally 12V because of the motors.
   - So every developement board has a power section which converts 12V to standard levels like 5V/ 3.3V for microcontroller and Sensors.
   - In previous year SRA board 12V to 5V was converted using LM7805 linear regulator. Using this 5V esp32 was powered.
-  -Further this 5V was converted to 3.3V using LD33 linear voltage regulator. This 3.3V then given to the sensor port.
+  - Further this 5V was converted to 3.3V using LD33 linear voltage regulator. This 3.3V then given to the sensor port.
 
 - ## Motor Driver:
     - Motors usually runs on 12V and microcontroller output is generally 5V/3.3V. So one need external motor drive circuitry to control motors according to the microcontroller input.
