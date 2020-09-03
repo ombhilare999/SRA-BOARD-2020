@@ -46,7 +46,7 @@ In general every development board like sra board have following basic features:
 
 - ### Motor Driver:
     - Motors usually runs on 12V and microcontroller output is generally 5V/3.3V. So one need external motor driver circuitry to control motors according to the microcontroller input.
-    - In sra board 2019 the motors was controlled using L298N motor driver which is a transistor based H Bridge motor driver.
+    - In sra board 2019 the motors was controlled using L298N motor driver which is a bjt based H Bridge motor driver.
 
 - ### Sensor port:
     - According to the external sensor types usually development boards have on board sensor ports where sensor can be connected easily using FRC port.
@@ -96,7 +96,7 @@ In general every development board like sra board have following basic features:
 
         -  As discussed earlier in new design there are two motor drivers. Each TB6612FNG can control two motors. So therefore using two motor driver one can control 4 motors using 8 GPIO's of esp32.
         - For example: if 32 pin is HIGH(IN1 = HIHG) and pin 33 is low(IN2 = LOW) then motor 1 moves in the forward direction. 
-        - So in normal mode 4 motors can be connected to the board and one thing note is per channel/motor the current capacity is 1.2 Amp<br /><br />
+        - So in normal mode 4 motors can be connected to the board and one thing to be noted is per channel/motor the current capacity is 1.2 Amp<br /><br />
         2. **Parallel Mode**:<br />
          <p align="center">
             <img width="460" height="300" src="/Documentation/assets/parallel_mode.jpeg">
@@ -105,7 +105,7 @@ In general every development board like sra board have following basic features:
         -  Parallel mode is special feature, it is used for high rated motors. if suppose your motor needs more than 1.2 amp current then for that motor parallel mode should be used.
         -  In parallel mode the channel's directional pins and output pins are shorted. so only one motor is connected to one motor driver i.e. using two channels you can control one motor because of which current capacity is doubled to 2.4 amp.
         -  So in parallel mode two high rated motors can be controlled using esp32.
-        -  One thing should be noted here that directional pin shorting is done by manyal DPDT switch. If user turns on 'TB_A' switch then first motor driver goes into parallel mode and its directional pins are shorted. IN1 = IN3 = 25 and IN2 = IN4 = 26.If TB_A switch is off first motor driver goes into normal mode where gpio connections are IN1 = 32: IN2 = 33: IN3 = 25: IN4 = 26. This is all done automatically. 
+        -  One thing should be noted here that directional pin shorting is done by manual DPDT switch. If user turns on 'TB_A' switch then first motor driver goes into parallel mode and its directional pins are shorted. IN1 = IN3 = 25 and IN2 = IN4 = 26.If TB_A switch is off first motor driver goes into normal mode where gpio connections are IN1 = 32: IN2 = 33: IN3 = 25: IN4 = 26. This is all done automatically. 
         - In parallel mode the J1,J2,J3 and J4 junctions needs to be shorted.They shorts the output of the motor driver.
 - ### **Moving back to vintage Bar Graph LED and more no. of switches**:<br /><br />
     - In previous year we were using 2 programmable switches and 2 programmable Leds but in this years design we have provided bar graph led which contains 10 Leds out of which two are reserved for 5V and 3.3V voltage indication purpose.
