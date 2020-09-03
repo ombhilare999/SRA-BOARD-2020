@@ -1,14 +1,30 @@
 # SRA BOARD 2020
 
-Compare to the 2019 means last year's SRA board there are some major changes done in new board design. All changes are mentioned here in greater detailed.
+Sra board is a development board based on esp32 with peripherals like motor driver, over current and reverse voltage protection circuit, programmable switches and leds, sensor ports.
 
-![](/Documentation/assets/boards_compare.png)
 
+![](/Documentation/assets/3d_sideview.png)
+
+## Table of contents:
+- [About this project](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#About-this-project)
+- [What is development board](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#what-is-development-board-)
+    - [Power supply unit](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Power-supply-unit)
+    - [Motor Driver](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Motor-Driver)
+    - [Sensor port](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Sensor-port)
+    - [Protection against reverse voltage and overcurrent](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.mdprotection-against-reverse-voltage-and-overcurrent)
+    - [Programmable switches and leds](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Programmable-switches-and-leds)
+    - [Power on/off switch](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#power-onoff-switch)
+
+
+
+## About this project:
+- ### sra board is esp32 based development board for Wall E and MARIO workshop conducted by  [SRA](https://github.com/SRA-VJTI) 
+- Designed using eagle. Board and schematic files are [here](https://github.com/ombhilare999/SRA-BOARD-2020/tree/master/Eagle)  
 
 ## What is development board ?
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Documentation/assets/sra_board_2019.png">
+  <img width="460" height="300" src="/Documentation/assets/boards_compare.png">
 </p>
 
 In general every development board like sra board have following basic features:
@@ -62,7 +78,7 @@ In general every development board like sra board have following basic features:
     </p>
 
 - ### **4 motor channels and normal, parallel mode of motor driver**:<br /><br />
-    - In previous year sra board one L298N was used using which only two motors as l298n as two motor channels but in this year 2x TB6612FNG  motor driver is used so maximum 4 motors can be controlled using esp32.
+    - In previous year sra board one L298N was used using which can only control two motors as l298n as two motor channels but in this year 2x TB6612FNG  motor driver is used so maximum 4 motors can be controlled using esp32.
     - Motor driver can be worked in two modes **Normal mode** and **parallel mode**:   
         1. **Normal Mode**:<br />
         <p align="center">
