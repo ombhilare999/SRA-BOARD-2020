@@ -5,7 +5,7 @@ Compare to the 2019 means last year's SRA board there are some major changes don
 ![](/Documentation/assets/boards_compare.png)
 
 
-## Background info of sra board 2019:
+## What is developement board ?:
 
 <p align="center">
   <img width="460" height="300" src="https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Documentation/assets/sra_board_2019.png">
@@ -20,7 +20,7 @@ In general every developement board like sra board have following basic features
   - Further this 5V was converted to 3.3V using LD33 linear voltage regulator. This 3.3V then given to the sensor port.
 
 - ## Motor Driver:
-    - Motors usually runs on 12V and microcontroller output is generally 5V/3.3V. So one need external motor drive circuitry to control motors according to the microcontroller input.
+    - Motors usually runs on 12V and microcontroller output is generally 5V/3.3V. So one need external motor driver circuitry to control motors according to the microcontroller input.
     - In sra board 2019 the motors was controlled using L298N motor driver which is a transistor based H Bridge motor driver.
 
 - ## Sensor port:
