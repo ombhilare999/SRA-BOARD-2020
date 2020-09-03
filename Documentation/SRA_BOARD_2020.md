@@ -42,7 +42,7 @@ In general every development board like sra board have following basic features:
 >Now that you understood about basic of development board now let's talk about changes made in the new design.
 
 - ## Some of the major changes made in the new design:
-    - 7805 5V linear regulator replaced by [LM2596 buck](https://www.youtube.com/watch?v=m8rK9gU30v4) circuit.
+    - **7805(5V linear regulator) replaced by [LM2596 buck](https://www.youtube.com/watch?v=m8rK9gU30v4) circuit.**
      > The reason of changing to buck circuit rather than using simple 7805 is the efficiency, output current and reliability of LM2596 is more than 7805. The efficiency of LM2596 is upto 92% which is way better than 7805. The LM2596 can provide current upto 3 Amp so from now on servos in ros workshop can be run using on board regulator itself.
     -
     
