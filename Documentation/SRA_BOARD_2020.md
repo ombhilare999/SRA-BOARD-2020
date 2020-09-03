@@ -5,7 +5,7 @@ Compare to the 2019 means last year's SRA board there are some major changes don
 ![](/Documentation/assets/boards_compare.png)
 
 
-## What is development board
+## What is development board ?
 
 <p align="center">
   <img width="460" height="300" src="https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Documentation/assets/sra_board_2019.png">
