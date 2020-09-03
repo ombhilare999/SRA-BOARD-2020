@@ -7,7 +7,9 @@ Compare to the 2019 means last year's SRA board there are some majo/Documentatio
 
 ## Background info of sra board 2019:
 
-![](/Documentation/assets/sra_board_2019.png?style=centerme)
+<p align="center">
+  <img width="460" height="300" src="https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/Documentation/assets/sra_board_2019.png">
+</p>
 
 In general every developement board like sra board have following basic features:
 
