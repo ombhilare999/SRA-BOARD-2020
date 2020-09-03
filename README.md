@@ -21,9 +21,8 @@ Sra board is a development board based on esp32 with peripherals like motor driv
     - [Reverse voltage protection diodes replaced by pmosfet](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#diodes-for-reverse-voltage-replaced-by-p-type-mosfet)
     - [L298N replaced by TB6612FNG](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#l298n-replaced-by-tb6612fng)
     - [4 motor channels and modes of motor driver](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#4-motor-channels-and-normal-parallel-mode-of-motor-driver)
-    - [switch to bar graph led and more no. of switches](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/
-    README.md#moving-back-to-vintage-bar-graph-led-and-more-no-of-switches)
-- [3D model](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#3D-mode)
+    - [switch to bar graph led and more no. of switches](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#moving-back-to-vintage-bar-graph-led-and-more-no-of-switches)
+- [3D model](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#3d-model)
 - [Current Status](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Current-Status)
 - [Designer](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Designer)
 - [License](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#License)
