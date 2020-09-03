@@ -45,7 +45,7 @@ In general every development board like sra board have following basic features:
     - **7805(5V linear regulator) replaced by [LM2596 buck](https://www.youtube.com/watch?v=m8rK9gU30v4) circuit:**
      > The reason of changing to buck circuit rather than using simple 7805 is the efficiency, output current and reliability of LM2596 is more than 7805. The efficiency of LM2596 is upto 92% which is way better than 7805. The LM2596 can provide current upto 3 Amp so from now on servos in ros workshop can be run using on board regulator itself.
     - **L298N replaced by TB6612FNG**:
-    > L298N is a bjt based H bridge motor driver but it is less efficient as compare to the new mos based ![TB6612FNG](https://dronebotworkshop.com/tb6612fng-h-bridge/). Detailed comparison show below.
+    > L298N is a bjt based H bridge motor driver but it is less efficient as compare to the new mos based [TB6612FNG](https://dronebotworkshop.com/tb6612fng-h-bridge/). Detailed comparison show below.
 ![](https://i1.wp.com/dronebotworkshop.com/wp-content/uploads/2019/12/TB6612-vs-L298N.jpeg?w=768&ssl=1)
     As you can see the efficiency of TB6612FNG can reach up to 91-95% which is way higher than compare to the 40-70% efficiency of L298N. the only drawback of TB6612FNG is less continuous current which is equal to 1.2 Amp. So for higher current capacity motors two TB6612FNG are given on the board. so they can be used in parallel mode to double the current capacity to 2.4 Amp.
     
