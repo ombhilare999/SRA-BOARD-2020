@@ -11,14 +11,23 @@ Sra board is a development board based on esp32 with peripherals like motor driv
     - [Power supply unit](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Power-supply-unit)
     - [Motor Driver](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Motor-Driver)
     - [Sensor port](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Sensor-port)
-    - [Protection against reverse voltage and overcurrent](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.mdprotection-against-reverse-voltage-and-overcurrent)
+    - [Protection against reverse voltage and overcurrent](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#protection-against-reverse-voltage-and-overcurrent)
     - [Programmable switches and leds](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Programmable-switches-and-leds)
     - [Power on/off switch](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#power-onoff-switch)
-
+- [Major changes made in the new design](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#major-changes-made-in-the-new-design)
+    - [7805 replaced by LM2596 buck](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#78055v-linear-regulator-replaced-by-lm2596-buck-circuit)
+    - [ld33 replaced by AMS1117](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#ld3333v-replaced-by-ams1117)
+    - [Reverse voltage protection diodes replaced by pmosfet](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#diodes-for-reverse-voltage-replaced-by-p-type-mosfet)
+    - [L298N replaced by TB6612FNG](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#l298n-replaced-by-tb6612fng)
+    - [4 motor channels and modes of motor driver](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#4-motor-channels-and-normal-parallel-mode-of-motor-driver)
+    - [switch to bar graph led and more no. of switches](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#moving-back-to-vintage-bar-graph-led-and-more-no-of-switches)
+- [Current Status](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Current-Status)
+- [Designer](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#Designer)
+- [License](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/README.md#License)
 
 
 ## About this project:
-- ### sra board is esp32 based development board for Wall E and MARIO workshop conducted by  [SRA](https://github.com/SRA-VJTI) 
+- sra board is esp32 based development board used for Wall E and MARIO workshop conducted by  [SRA](https://github.com/SRA-VJTI) 
 - Designed using eagle. Board and schematic files are [here](https://github.com/ombhilare999/SRA-BOARD-2020/tree/master/Eagle)  
 
 ## What is development board ?
@@ -106,7 +115,16 @@ In general every development board like sra board have following basic features:
         1. According to the lsa data we can program 4 leds to turn on when line sensor detects white color and turn off for black color with this feature debugging will be easy.
         2. If motor is moving in forward direction according to that dedicated leds will be turn on indicating IN1 is high and IN2 is low because of this motion of the bot can be debugged.
 
+## Current Status:
 
+- The board is right now in testing phase.
+- Thanks to [OSH](https://oshpark.com/) for providing us 100 dollar free coupon code for prototype boards.
+
+## Designer:
+- SRA BOARD 2020 was designed by [omkar bhilare](https://github.com/ombhilare999)
+
+## License:
+- [MIT License](https://github.com/ombhilare999/SRA-BOARD-2020/blob/master/LICENSE)
 
 
 
