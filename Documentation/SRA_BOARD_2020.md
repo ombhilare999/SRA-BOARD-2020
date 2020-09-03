@@ -43,40 +43,49 @@ In general every development board like sra board have following basic features:
 
 - ## Major changes made in the new design:
     - **7805(5V linear regulator) replaced by [LM2596 buck](https://www.youtube.com/watch?v=m8rK9gU30v4) circuit:**<br /><br />
-     > - The reason of changing to buck circuit rather than using simple 7805 is the efficiency, output current and reliability of LM2596 is more than 7805.
-     > - The efficiency of LM2596 is upto 92% which is way better than 7805. The LM2596 can provide current upto 3 Amp so from now on servos in ros workshop can be run using on board regulator itself.
-
+        - The reason of changing to buck circuit rather than using simple 7805 is the efficiency, output current and reliability of LM2596 is more than 7805.
+        - The efficiency of LM2596 is upto 92% which is way better than 7805. The LM2596 can provide current upto 3 Amp so from now on servos in ros workshop can be run using on board regulator itself.
+    <br /><br />
     - **LD33(3.3V) replaced by AMS1117**:<br /><br />
-    >  - Until last year we were using LD33 to convert 5V to 3.3V but after talking to our super senior we have decided to shift to more compact, reliable AMS1117(SOT-23) linear voltage regulator. (same voltage regulator i.e. AMS1117 is used on esp32 devkit c V4 module)
+        - Until last year we were using LD33 to convert 5V to 3.3V but after talking to our super senior we have decided to shift to more compact, reliable AMS1117(SOT-23) linear voltage regulator. (same voltage regulator i.e. AMS1117 is used on esp32 devkit c V4 module)
+    <br /><br />
 
     - **L298N replaced by [TB6612FNG](https://dronebotworkshop.com/tb6612fng-h-bridge/)**:<br /><br />
-    > - L298N is a bjt based H bridge motor driver but it is less efficient as compare to the new mos based TB6612FNG.
-    > - Detailed comparison show below. As you can see the efficiency of TB6612FNG can reach up to 91-95% which is way higher than compare to the 40-70% efficiency of L298N.
-     > - The only drawback of TB6612FNG is less continuous current which is equal to 1.2 Amp. So for higher current capacity motors two TB6612FNG are given on the board. so they can be used in parallel mode to double the current capacity to 2.4 Amp.
+        - L298N is a bjt based H bridge motor driver but it is less efficient as compare to the new mos based TB6612FNG.
+        - Detailed comparison show below. As you can see the efficiency of TB6612FNG can reach up to 91-95% which is way higher than compare to the 40-70% efficiency of L298N.
+        - The only drawback of TB6612FNG is less continuous current which is equal to 1.2 Amp. So for higher current capacity motors two TB6612FNG are given on the board. so they can be used in parallel mode to double the current capacity to 2.4 Amp.
     
     <p align="center">
         <img width="460" height="300" src="https://i1.wp.com/dronebotworkshop.com/wp-content/uploads/2019/12/TB6612-vs-L298N.jpeg?w=768&ssl=1">
     </p>
 
+    <br /><br />
 
     - **4 motor channels and normal, parallel mode of motor driver**:<br /><br />
-    > -  In previous year sra board one L298N was used using which only two motors as l298n as two motor channels but in this year 2x TB6612FNG  motor driver is used so maximum 4 motors can be controlled using esp32.
-    > - Motor driver can be worked in two modes **Normal mode** and **parallel mode**:   
-    > > 1. **Normal Mode**:<br />
-    ![](/Documentation/assets/normal_mode.jpeg)<br />
-    As discussed earlier in new design there are two motor drivers. Each TB6612FNG can control two motors. So therefore using two motor driver one can control 4 motors using 8 GPIO's of esp32.<br />
-    For example: if 32 pin is HIGH(IN1 = HIHG) and pin 33 is low(IN2 = LOW) then motor 1 moves in the forward direction. <br \>
-    So in normal mode 4 motors can be connected to the board.
+        - In previous year sra board one L298N was used using which only two motors as l298n as two motor channels but in this year 2x TB6612FNG  motor driver is used so maximum 4 motors can be controlled using esp32.
+        - Motor driver can be worked in two modes **Normal mode** and **parallel mode**:   
+        1. **Normal Mode**:<br />
+        <p align="center">
+            <img width="460" height="300" src="/Documentation/assets/normal_mode.jpeg">
+        </p>
 
-    > > 2. **Parallel Mode**:<br />
-    
+        -  As discussed earlier in new design there are two motor drivers. Each TB6612FNG can control two motors. So therefore using two motor driver one can control 4 motors using 8 GPIO's of esp32.
+        - For example: if 32 pin is HIGH(IN1 = HIHG) and pin 33 is low(IN2 = LOW) then motor 1 moves in the forward direction. 
+        - So in normal mode 4 motors can be connected to the board.<br /><br />
+        2. **Parallel Mode**:<br />
+         <p align="center">
+            <img width="460" height="300" src="/Documentation/assets/normal_mode.jpeg">
+        </p>
+
+        - parallel mode.
+    <br /><br />
     - **Shifting back to vintage Bar Graph LED and more switches**:<br /><br />
-    > - In previous year we were using 2 programmable switches and 2 programmable Leds but in this years design we have provided bar graph led which contains 10 Leds out of which two are reserved for 5V and 3.3V voltage indication purpose.
-    > -  So there are 8 programmable leds on the board. These leds multiplexed with directional pins of two motor driver to save pins.
-    > -  What are directional pins ? >> Every motor driver channel has two directional pins IN1, IN2. If IN1 is high and IN2 is low then motors move in clockwise direction and there are 4 channels on the board so 4*2 = 8 diretional pins are multiplexed with 8 programmable leds)
-    > -  With 8 leds in hand programmer can do crazy tricks for debugging. Some examples are as follows:
-    > > 1) According to the lsa data we can program 4 leds to turn on when line sensor detects white color and turn off for black color with this feature debugging will be easy.
-    > > 2) If motor is moving in forward direction according to that dedicated leds will be turn on indicating IN1 is high and IN2 is low because of this motion of the bot can be debugged.
+        - In previous year we were using 2 programmable switches and 2 programmable Leds but in this years design we have provided bar graph led which contains 10 Leds out of which two are reserved for 5V and 3.3V voltage indication purpose.
+        -  So there are 8 programmable leds on the board. These leds multiplexed with directional pins of two motor driver to save pins.
+        -  What are directional pins ? >> Every motor driver channel has two directional pins IN1, IN2. If IN1 is high and IN2 is low then motors move in clockwise direction and there are 4 channels on the board so 4*2 = 8 diretional pins are multiplexed with 8 programmable leds)
+        -  With 8 leds in hand programmer can do crazy tricks for debugging. Some examples are as follows:
+        1. According to the lsa data we can program 4 leds to turn on when line sensor detects white color and turn off for black color with this feature debugging will be easy.
+        2) If motor is moving in forward direction according to that dedicated leds will be turn on indicating IN1 is high and IN2 is low because of this motion of the bot can be debugged.
 
 
 
